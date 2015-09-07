@@ -10,6 +10,11 @@ namespace noisebox
 {
 	class Program
 	{
+		/// <summary>
+		/// The main starting point of noisebox.
+		/// </summary>
+		/// <param name="args">The command line arguments.</param>
+		/// <returns>The error code to return to the OS.</returns>
 		static int Main(string[] args)
 		{
 			NoiseMaker noiseMaker = new NoiseMaker();
@@ -111,57 +116,29 @@ namespace noisebox
 							break;
 							
 						case "frames":
-							try
-							{
-								noiseMaker.FrameCount = int.Parse(args[i + 1]);
-							}
-							catch
-							{
-								Console.WriteLine("Invalid frame count {0}", args[i + 1]);
+							if(!Utils.ParseInt(args[i + 1], out noiseMaker.FrameCount, "Invalid frame count " + args[i + 1]))
 								return 1;
-							}
 
 							i++;
 							break;
 
 						case "offset":
-							try
-							{
-								noiseMaker.FrameOffset = int.Parse(args[i + 1]);
-							}
-							catch
-							{
-								Console.WriteLine("Invalid offset {0}", args[i + 1]);
+							if (!Utils.ParseInt(args[i + 1], out noiseMaker.FrameOffset, "Invalid offset " + args[i + 1]))
 								return 1;
-							}
 
 							i++;
 							break;
 
 						case "threads":
-							try
-							{
-								noiseMaker.ThreadCount = int.Parse(args[i + 1]);
-							}
-							catch
-							{
-								Console.WriteLine("Invalid thread count {0}", args[i + 1]);
+							if (!Utils.ParseInt(args[i + 1], out noiseMaker.ThreadCount, "Invalid thread count " + args[i + 1]))
 								return 1;
-							}
 
 							i++;
 							break;
 
 						case "seed":
-							try
-							{
-								noiseMaker.Seed = int.Parse(args[i + 1]);
-							}
-							catch
-							{
-								Console.WriteLine("Invalid seed {0}", args[i + 1]);
+							if (!Utils.ParseInt(args[i + 1], out noiseMaker.Seed, "Invalid seed " + args[i + 1]))
 								return 1;
-							}
 
 							i++;
 							break;
