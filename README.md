@@ -55,4 +55,4 @@ Algorithm	| Inventor		| License	| Implementor(s)			| Link to source code
 ## License
 noisebox is licensed under the [Mozilla Public License 2.0](https://tldrlegal.com/license/mozilla-public-license-2.0-(mpl-2)). The full text can be [found here](https://raw.githubusercontent..com/sbrl/noisebox/master/LICENSE).
 
-The noise algorithms (and their implementations are not covered by this license. Please see the section above for more information.
+The noise algorithms (and their implementations) are not covered by this license. Please see the section above for more information.
