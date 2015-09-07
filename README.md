@@ -53,6 +53,6 @@ Algorithm	| Inventor		| License	| Implementor(s)			| Link to source code
 [Worley](https://en.wikipedia.org/wiki/Worley_noise)		| Steven Worley	| ? (implementation under the same license as this repo)		| [Starbeamrainbowlabs](https://github.com/sbrl/) | https://raw.githubusercontent.com/sbrl/noisebox/master/noisebox/Worley.cs
 
 ## License
-noisebox is licensed under the [Mozilla Public License 2.0](https://tldrlegal.com/license/mozilla-public-license-2.0-(mpl-2)). The full text can be [found here](https://raw.githubusercontent..com/sbrl/noisebox/master/LICENSE.txt).
+noisebox is licensed under the [Mozilla Public License 2.0](https://tldrlegal.com/license/mozilla-public-license-2.0-(mpl-2)). The full text can be [found here](https://raw.githubusercontent..com/sbrl/noisebox/master/LICENSE).
 
 The noise algorithms (and their implementations are not covered by this license. Please see the section above for more information.
