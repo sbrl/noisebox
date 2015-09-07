@@ -22,6 +22,12 @@ namespace WorleyNoise
 		Chebyshev
 	}
 
+	enum ValueFunction
+	{
+		DistClosest,
+		SecondTakeFirst
+	}
+
 	class Worley
 	{
 		protected int seed;
@@ -121,6 +127,8 @@ namespace WorleyNoise
 		public void GenerateImage(ref byte[] pixels, int width, int height, int z)
 		{
 			float[] rawValues = new float[width * height];
+			// Store the maximum value we find
+			float maxValue = 0;
 
 			int squareWidth = width / squareSize;
 			int squareHeight = height / squareSize;
@@ -169,20 +177,38 @@ namespace WorleyNoise
 							sortNumbers(ref distances);
 
 							// Calculate the value for this pixel
-							float value = distances[1] - distances[0];
+							float value = Math.Abs(/*distances[1] - */distances[0]);
+							if (value > maxValue)
+								maxValue = value;
+
+							rawValues[(py * width) + px] = value;
+
 							//byte value = (byte)(Generate(distances) * 255);
 
-							int curIndex = ((py * width) + px) * 4;
-							pixels[curIndex] = (byte)(value);
-							pixels[curIndex + 1] = (byte)(value);
-							pixels[curIndex + 2] = (byte)(value);
 						}
 					}
 
 					currentBlock++;
 				}
 			}
-			Console.WriteLine();
+
+			Console.WriteLine("Maximum value found: {0}", maxValue);
+
+			// Copy the raw values to the actual image
+			for (int y = 0; y < width; y++)
+			{
+				for (int x = 0; x < width; x++)
+				{
+					byte value = (byte)((rawValues[(y * width) + x] / maxValue) * 255);
+
+					int curPixelIndex = ((y * width) + x) * 4;
+					pixels[curPixelIndex] = (byte)(value);
+					pixels[curPixelIndex + 1] = (byte)(value);
+					pixels[curPixelIndex + 2] = (byte)(value);
+				}
+			}
+
+				Console.WriteLine();
 		}
 
 		/// <summary>
