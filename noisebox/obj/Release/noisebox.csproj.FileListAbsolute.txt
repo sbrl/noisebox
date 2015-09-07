@@ -1,0 +1,6 @@
+E:\code\csharp\noisebox\noisebox\bin\Release\noisebox.exe.config
+E:\code\csharp\noisebox\noisebox\bin\Release\noisebox.exe
+E:\code\csharp\noisebox\noisebox\bin\Release\noisebox.pdb
+E:\code\csharp\noisebox\noisebox\obj\Release\noisebox.csprojResolveAssemblyReference.cache
+E:\code\csharp\noisebox\noisebox\obj\Release\noisebox.exe
+E:\code\csharp\noisebox\noisebox\obj\Release\noisebox.pdb

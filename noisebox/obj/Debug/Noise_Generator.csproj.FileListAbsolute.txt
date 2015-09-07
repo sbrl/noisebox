@@ -1,0 +1,9 @@
+R:\Noise_Generator\Noise_Generator\obj\Debug\Noise_Generator.csprojResolveAssemblyReference.cache
+R:\Noise_Generator\Noise_Generator\bin\Debug\noisebox.exe.config
+R:\Noise_Generator\Noise_Generator\bin\Debug\noisebox.exe
+R:\Noise_Generator\Noise_Generator\bin\Debug\noisebox.pdb
+R:\Noise_Generator\Noise_Generator\obj\Debug\noisebox.exe
+R:\Noise_Generator\Noise_Generator\obj\Debug\noisebox.pdb
+R:\noisebox\Noise_Generator\bin\Debug\noisebox.exe.config
+R:\noisebox\Noise_Generator\obj\Debug\noisebox.exe
+R:\noisebox\Noise_Generator\obj\Debug\noisebox.pdb

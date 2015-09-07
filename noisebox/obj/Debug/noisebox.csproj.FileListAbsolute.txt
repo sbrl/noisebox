@@ -1,0 +1,12 @@
+R:\noisebox\noisebox\bin\Debug\noisebox.exe.config
+R:\noisebox\noisebox\obj\Debug\noisebox.exe
+R:\noisebox\noisebox\obj\Debug\noisebox.pdb
+R:\noisebox\noisebox\bin\Debug\noisebox.exe
+R:\noisebox\noisebox\bin\Debug\noisebox.pdb
+R:\noisebox\noisebox\obj\Debug\noisebox.csprojResolveAssemblyReference.cache
+E:\code\csharp\noisebox\noisebox\bin\Debug\noisebox.exe.config
+E:\code\csharp\noisebox\noisebox\obj\Debug\noisebox.exe
+E:\code\csharp\noisebox\noisebox\obj\Debug\noisebox.pdb
+E:\code\csharp\noisebox\noisebox\bin\Debug\noisebox.exe
+E:\code\csharp\noisebox\noisebox\bin\Debug\noisebox.pdb
+E:\code\csharp\noisebox\noisebox\obj\Debug\noisebox.csprojResolveAssemblyReference.cache
