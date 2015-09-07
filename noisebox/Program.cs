@@ -39,10 +39,14 @@ namespace noisebox
 							Console.WriteLine("                             OpenSimplex");
 							Console.WriteLine("                             Perlin");
 							Console.WriteLine("                             Worley");
-							Console.WriteLine("    -distfunc  euclidean The distance function to use when rendering worley noise. Possible values:");
+							Console.WriteLine("    -distfunc  euclidean The distance function to use when rendering worley noise. Currently supported functions:");
 							Console.WriteLine("                             Euclidean (default)");
 							Console.WriteLine("                             Manhattan (aka Taxicab)");
 							Console.WriteLine("                             Chebyshev (aka Chessboard)");
+							Console.WriteLine("    -valuefunc SecondTakeFirst");
+							Console.WriteLine("                             The function to use when determining the value of a pixel when rendering worley noise. Currently supported functions: ");
+							Console.WriteLine("                             SecondTakeFirst - The second closest point take the closest point.");
+							Console.WriteLine("                             Closest - Just take the distance to the closest point.");
 							Console.WriteLine("    -colour  #ffffff     The colour of the resulting image. This is actually applied as multiplier, so a value of #ffffff (white, the default) will not change anything, while #000000 (black) will cause the output image to be completed black. This doesn't have any effect on the Worley algorithm yet.");
 							Console.WriteLine("    -frames  1           The number of frames to create. Supporting noise algorithms increment the z value in each frame, creating an animation of sorts. Add a hash symbol (#) to the filename and it will be replaced by the frame number.");
 							Console.WriteLine("    -offset  0           The offset in depth for the number of frame to render. Useful if the rendering of a large number of frame was interrupted and you want to resume.");
@@ -106,6 +110,26 @@ namespace noisebox
 							{
 								Console.WriteLine("Invalid distance function '{0}'. Currently supported types: ", distFuncText);
 								foreach (string func in Enum.GetNames(typeof(WorleyNoise.DistanceFunction)))
+								{
+									Console.WriteLine("    {0}", func);
+								}
+								return 1;
+							}
+
+							i++;
+							break;
+
+						case "valuefunc":
+							string valueFuncText = args[i + 1];
+
+							try
+							{
+								noiseMaker.ValueFunction = (WorleyNoise.ValueFunction)Enum.Parse(typeof(WorleyNoise.ValueFunction), valueFuncText, true);
+							}
+							catch
+							{
+								Console.WriteLine("Invalid value function '{0}'. Currently supported types: ", valueFuncText);
+								foreach (string func in Enum.GetNames(typeof(WorleyNoise.ValueFunction)))
 								{
 									Console.WriteLine("    {0}", func);
 								}

@@ -35,8 +35,9 @@ namespace noisebox
 
 		public NoiseType Type = NoiseType.White;
 		public WorleyNoise.DistanceFunction DistanceFunction = WorleyNoise.DistanceFunction.Euclidean;
+		public WorleyNoise.ValueFunction ValueFunction = WorleyNoise.ValueFunction.SecondTakeFirst;
 
-		public long Seed = -1;
+		public int Seed = -1;
 
 		protected Random rng;
 		protected Stopwatch timer;
@@ -322,6 +323,7 @@ namespace noisebox
 			WorleyNoise.Worley worley = new WorleyNoise.Worley((int)Seed);
 			// set the distance function
 			worley.DistFunc = DistanceFunction;
+			worley.ValueFunc = ValueFunction;
 			// Render the image
 			worley.GenerateImage(ref pixels, Width, Height, z);
 			/*

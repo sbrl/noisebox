@@ -24,7 +24,7 @@ namespace WorleyNoise
 
 	enum ValueFunction
 	{
-		DistClosest,
+		Closest,
 		SecondTakeFirst
 	}
 
@@ -36,6 +36,7 @@ namespace WorleyNoise
 		protected int pointsPerSquare = 3;
 
 		public DistanceFunction DistFunc = DistanceFunction.Euclidean;
+		public ValueFunction ValueFunc = ValueFunction.SecondTakeFirst;
 
 		public Worley()
 			: this(-1)
@@ -177,7 +178,19 @@ namespace WorleyNoise
 							sortNumbers(ref distances);
 
 							// Calculate the value for this pixel
-							float value = Math.Abs(/*distances[1] - */distances[0]);
+							float value;
+							switch(ValueFunc)
+							{
+								case ValueFunction.SecondTakeFirst:
+									value = Math.Abs(distances[1] - distances[0]);
+									break;
+								case ValueFunction.Closest:
+									value = Math.Abs(distances[0]);
+									break;
+								default:
+									throw new Exception(String.Format("Unknown value function {0}.", ValueFunc));
+							}
+
 							if (value > maxValue)
 								maxValue = value;
 
@@ -476,10 +489,14 @@ namespace WorleyNoise
 					);
 
 				case DistanceFunction.Manhattan:
-					return distance_x + distance_y + distance_z;
+					return Math.Abs(distance_x) + Math.Abs(distance_y) + Math.Abs(distance_z);
 
 				case DistanceFunction.Chebyshev:
-					return Math.Max(distance_x, Math.Max(distance_y, distance_z));
+					return Math.Max(
+						Math.Abs(distance_x),
+						Math.Max(Math.Abs(distance_y),
+						Math.Abs(distance_z)
+					));
 			}
 
 			throw new Exception("Unknown distance function " + DistFunc.ToString());
