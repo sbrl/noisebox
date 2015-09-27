@@ -8,11 +8,11 @@ Noisebox is a command line tool that helps you generate random noise, written in
 
 The following noise types are currently supported:
 
- - [White](https://en.wikipedia.org/wiki/White_noise) by the random number generator and Starbeamrainbowlabs
- - [Perlin](https://en.wikipedia.org/wiki/Perlin_noise) by Ken Perlin, implemented by Tom Nuydens, converted to C&sharp; by Mattias Fagerlund.
- - [Simplex](https://en.wikipedia.org/wiki/Simplex_noise) by Ken Perlin, implemented by Heikki Törmälä.
- - [OpenSimplex](https://en.wikipedia.org/wiki/OpenSimplex_noise) by KdotJPG, ported from Java and refactored by digitalshadow to improve performance.
- - [Worley](https://en.wikipedia.org/wiki/Worley_noise) by Steven Worley, implemented by Starbeamrainbowlabs
+ - [White](https://en.wikipedia.org/wiki/White_noise) (bottom centre) by the random number generator and Starbeamrainbowlabs
+ - [Perlin](https://en.wikipedia.org/wiki/Perlin_noise) (top right) by Ken Perlin, implemented by Tom Nuydens, converted to C&sharp; by Mattias Fagerlund.
+ - [Simplex](https://en.wikipedia.org/wiki/Simplex_noise) (bottom left) by Ken Perlin, implemented by Heikki Törmälä.
+ - [OpenSimplex](https://en.wikipedia.org/wiki/OpenSimplex_noise) (top centre) by KdotJPG, ported from Java and refactored by digitalshadow to improve performance.
+ - [Worley](https://en.wikipedia.org/wiki/Worley_noise) (bottom right, top left) by Steven Worley, implemented by Starbeamrainbowlabs
 
 Additional licensing and credit information can be found at the bottom of this file.
 
