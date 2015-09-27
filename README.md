@@ -4,11 +4,13 @@ Welcome to noisebox!
 
 Noisebox is a command line tool that helps you generate random noise, written in C&sharp; by [Starbeamrainbowlabs](https://starbeamrainbowlabs.com/).
 
+![Noisebox Example](http://i.imgur.com/Ex7h1jt.jpg)
+
 The following noise types are currently supported:
 
  - [White](https://en.wikipedia.org/wiki/White_noise) by the random number generator and Starbeamrainbowlabs
  - [Perlin](https://en.wikipedia.org/wiki/Perlin_noise) by Ken Perlin, implemented by Tom Nuydens, converted to C&sharp; by Mattias Fagerlund.
- - [Simplex](https://en.wikipedia.org/wiki/Simplex_noise) by Ken Perlin, implemented by Heikki Törmälä.
+ - [Simplex](https://en.wikipedia.org/wiki/Simplex_noise) by Ken Perlin, implemented by Heikki TÃ¶rmÃ¤lÃ¤.
  - [OpenSimplex](https://en.wikipedia.org/wiki/OpenSimplex_noise) by KdotJPG, ported from Java and refactored by digitalshadow to improve performance.
  - [Worley](https://en.wikipedia.org/wiki/Worley_noise) by Steven Worley, implemented by Starbeamrainbowlabs
 
@@ -48,7 +50,7 @@ Algorithm	| Inventor		| License	| Implementor(s)			| Link to source code
 ------------|---------------|-----------|---------------------------|----------------------------
 [White](https://en.wikipedia.org/wiki/White_noise)		| Random number generator | Public Domain | [Starbeamrainbowlabs](https://github.com/sbrl/)	| _n/a_
 [Perlin](https://en.wikipedia.org/wiki/Perlin_noise)		| [Ken Perlin](https://mrl.nyu.edu/~perlin/) | ?		| Tom Nuydens, ported from Delphi by [Mattias Fagerlund](https://lotsacode.wordpress.com/)	 | https://lotsacode.wordpress.com/2010/02/24/perlin-noise-in-c/
-[Simplex](https://en.wikipedia.org/wiki/Simplex_noise)		| [Ken Perlin](https://mrl.nyu.edu/~perlin/) | ? (implementation under [Unlicense](http://unlicense.org/)		| Heikki Törmälä, loosly based on the [SimplexNoise1324](http://staffwww.itn.liu.se/~stegu/aqsis/aqsis-newnoise/simplexnoise1234.h) implementation by Stefan Gustavson | http://web.archive.org/web/20150618221040/https://code.google.com/p/simplexnoise/source/browse/trunk/SimplexNoise/Noise.cs
+[Simplex](https://en.wikipedia.org/wiki/Simplex_noise)		| [Ken Perlin](https://mrl.nyu.edu/~perlin/) | ? (implementation under [Unlicense](http://unlicense.org/)		| Heikki TÃ¶rmÃ¤lÃ¤, loosly based on the [SimplexNoise1324](http://staffwww.itn.liu.se/~stegu/aqsis/aqsis-newnoise/simplexnoise1234.h) implementation by Stefan Gustavson | http://web.archive.org/web/20150618221040/https://code.google.com/p/simplexnoise/source/browse/trunk/SimplexNoise/Noise.cs
 [OpenSimplex](http://uniblock.tumblr.com/post/97868843242/noise) | [KdotJPG](http://uniblock.tumblr.com/)	| [Unlicense](http://unlicense.org/)	| [KdotJPG](http://uniblock.tumblr.com/), ported and refactored to improve performance by [digitalshadow](https://github.com/digitalshadow) | https://gist.github.com/digitalshadow/134a3a02b67cecd72181/
 [Worley](https://en.wikipedia.org/wiki/Worley_noise)		| Steven Worley	| ? (implementation under the same license as this repo)		| [Starbeamrainbowlabs](https://github.com/sbrl/) | https://raw.githubusercontent.com/sbrl/noisebox/master/noisebox/Worley.cs
 
